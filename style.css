@@ -1,0 +1,204 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  }
+  
+  p{
+    color: #fff;
+    font-size: 1.2rem;
+  }
+  
+  a{
+    color: white;
+    text-decoration: none;
+  }
+  
+  ul li {
+    list-style: none;
+    display: inline-block;
+  }
+  
+  .p1{
+    margin: 15%;
+    text-align: center;
+    text-transform:inherit;
+  }
+
+  .main {
+    padding: 1.5em;
+    height: 100vh;
+    background: linear-gradient(to bottom, rgb(0 0 0 / .25),rgb(0 0 0 / .25)), url("img/paisaje.png");
+    background-position: center center;
+    background-size: cover;
+    position: relative;
+    overflow: hidden;
+  }
+  
+  .main .top {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+  
+  .main .top .fa {
+    font-size: 2em;
+    color: white;
+    cursor: pointer;
+    visibility: hidden;
+  }
+  
+  .main .top .links-div {
+    z-index: 100;
+    width: 300px;
+    position: fixed;
+    left: -100%;
+    height: 100vh;
+    background: linear-gradient(to bottom right, rgb(255 255 255 / 70%), rgba(255, 255, 255, 0.6));
+    border-top-right-radius: 8px;
+    border-bottom-right-radius: 3px;
+            backdrop-filter: blur(5px);
+            transform: 300ms;
+  }
+  
+  .main .top .links-div .link {
+    margin-left: 3em;
+  }
+  
+  .main .top .links-div .link li {
+    display: block;
+    margin-top: 1.5em;
+  }
+  
+  .main .top .links-div .link li a{
+    color: #505050;
+    font-weight: bold;
+  }
+  
+  .main .top .links-div.active {
+    left: 0;
+    transform: 800ms;
+  }
+  
+  .main .top .signup li {
+    margin-left: 1em;
+  }
+  
+  .main .top .signup li a {
+    padding: .35em .85em;
+    background-color: transparent;
+    border: 1px solid white;
+    border-radius: 6px;
+    transition: 300ms;
+  }
+  
+  .main .top .signup li a:hover {
+    background-color: white;
+    color: black;
+  }
+  
+  .main .center {
+    position: relative;
+    left: 50%;
+    top: 15%;
+    transform: translate(-50%, -15%);
+    text-align: center;
+    display: grid;
+    grid-template-rows: 1fr 1fr;
+    row-gap: 8em;
+  }
+  
+  .main .center h1 {
+    font-weight: bold;
+    font-size:clamp(2.5rem, 5vw, 5rem);
+    color: white;
+  }
+  
+  .main .center input{
+    outline: none;
+    border: none;
+    width: 650px;
+    padding: 1rem;
+    border-radius: 10px;
+    font-size: 1em;
+    margin-bottom: 1rem;
+    filter: drop-shadow(6px 6px 12px gray);
+  }
+  
+  .main .center span {
+    position: relative;
+    left: -2.9em;
+    cursor: pointer;
+    padding: .5em;
+  }
+  
+  .main ul li {
+    margin: .5em .75em;
+  }
+  
+  .main ul li a {
+    transition: 400ms;
+    padding-bottom: .3em;
+  }
+  
+  .main ul li a:hover {
+    color: white;
+    border-bottom: 2px solid white;
+  }
+  
+  .bottom{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+  
+  .bottom{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100vw - 3em;
+    margin: auto;
+    position: absolute;
+    bottom: 2em;
+  }
+  
+  .bottom .social ul li {
+    list-style: none;
+    display: inline-block;
+    margin-right: 1em;
+  }
+  
+  .bottom .social ul li a i {
+    color: white;
+    font-size: 1.5em;
+  }
+
+  @media (max-width:768px){
+    .main .center .searh{
+      width: 500px;
+    }
+  }
+  
+  @media (max-width:583px){
+    .main .center span{
+      left: 44%;
+      top:-52px;
+    }
+  }
+  
+  @media (max-width: 580px) {
+    .main .center .search {
+      width: 100%;
+    }
+    .main .center .links{
+      display: none;
+    }
+    .main .top .fa {
+      cursor: pointer;
+      visibility: visible;
+    }
+  }
